@@ -1,14 +1,15 @@
 <div align="center">
 <img src="https://www.cdeng.net/plm/plm_logo.png" alt="k2-logo" width="200"/>
 <h2>🖲️ PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing</h2>
-</div>
 
 <a href='https://arxiv.org/abs/'><img src='https://img.shields.io/badge/Paper-ArXiv-C71585'></a>
-<a href='https://huggingface.co/PLM-Team/PLM-1.8B-Base'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-Base%20model-red'></a>
-<a href='https://huggingface.co/PLM-Team/PLM-1.8B-Instruct'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-Instruct%20model-red'></a>
-<a href='https://huggingface.co/PLM-Team/PLM-1.8B-Instruct-gguf'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-gguf%20model-red'></a>
-<a href='https://huggingface.co/datasets/plm-team/scots'><img src='https://img.shields.io/badge/Dataset-plm%20mix-4169E1'></img></a>
+<a href='https://huggingface.co/PLM-Team/PLM-1.8B-Base'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-Base-red'></a>
+<a href='https://huggingface.co/PLM-Team/PLM-1.8B-Instruct'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-Instruct-red'></a>
+<a href='https://huggingface.co/PLM-Team/PLM-1.8B-Instruct-gguf'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-gguf-red'></a>
+<a href='https://huggingface.co/datasets/plm-team/scots'><img src='https://img.shields.io/badge/Data-plm%20mix-4169E1'></img></a>
 <a><img src="https://img.shields.io/github/stars/plm-team/PLM"></a>
+
+</div>
 
 ---
 
