@@ -83,6 +83,27 @@ PLM-1.8B is a strong and reliable model, particularly in basic knowledge underst
 
 ## How to use PLM
 
+Here we introduce some methods to use PLM models.
+
+### Hugging Face
+
+```python
+import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+# Load model and tokenizer
+tokenizer = AutoTokenizer.from_pretrained("PLM-Team/PLM-1.8B-Instruct")
+model = AutoModelForCausalLM.from_pretrained("PLM-Team/PLM-1.8B-Instruct", torch_dtype=torch.bfloat16)
+
+# Input text
+input_text = "Tell me something about reinforcement learning."
+inputs = tokenizer(input_text, return_tensors="pt")
+
+# Completion
+output = model.generate(inputs["input_ids"], max_new_tokens=100)
+print(tokenizer.decode(output[0], skip_special_tokens=True))
+```
+
 ### llama.cpp
 
 The original contribution to the llama.cpp framwork is [Si1w/llama.cpp](https://github.com/Si1w/llama.cpp). Here is the usage:
@@ -93,7 +114,7 @@ cd llama.cpp
 pip install -r requirements.txt
 ```
 
-Then we can build with CPU of GPU (e.g. Orin). The build is based on `cmake`. 
+Then, we can build with CPU of GPU (e.g. Orin). The build is based on `cmake`. 
 
 - For CPU
 
@@ -107,6 +128,18 @@ cmake --build build --config Release
 ```bash
 cmake -B build -DGGML_CUDA=ON
 cmake --build build --config Release
+```
+
+Don't forget to download the GGUF files of the PLM. We use the quantization methods in `llama.cpp` to generate the quantized PLM.
+
+```bash
+huggingface-cli download --resume-download PLM-Team/PLM-1.8B-Instruct-gguf --local-dir PLM-Team/PLM-1.8B-Instruct-gguf
+```
+
+After build the `llama.cpp`, we can use `llama-cli` script to launch the PLM.
+
+```bash
+./build/bin/llama-cli -m ./PLM-Team/PLM-1.8B-Instruct-gguf/PLM-1.8B-Instruct-Q8_0.gguf -cnv -p "hello!" -n 128
 ```
 
 ## Future works
