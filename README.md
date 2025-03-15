@@ -32,9 +32,9 @@ PLM demonstrates highly competitive performance along with a series of advantage
 
 - **Sparse** (Less activated parameters but better performance)
 
-<center>
-    <img src="https://www.cdeng.net/plm/sparse_compare.png" width="50%"/>
-</center>
+<div style="text-align:center">
+<img src="https://www.cdeng.net/plm/sparse_compare.png" width="50%"/>
+</div>
 
 - **High efficiency** (Generate content with low latency while having a good quality)
 
