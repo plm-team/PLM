@@ -1,2 +1,136 @@
-# PLM
-PLM: Efficient Peripheral Language Models\\ Hardware-Co-Designed for Ubiquitous Computing
+<div style="text-align:center">
+<img src="https://www.cdeng.net/plm/plm_logo.png" alt="k2-logo" width="200"/>
+<h2>🖲️PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing</h2>
+</div>
+
+<a href='https://arxiv.org/abs/'><img src='https://img.shields.io/badge/Paper-ArXiv-C71585'></a>
+<a href='https://huggingface.co/PLM-Team/PLM-1.8B-Base'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-Base%20model-red'></a>
+<a href='https://huggingface.co/PLM-Team/PLM-1.8B-Instruct'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-Instruct%20model-red'></a>
+<a href='https://huggingface.co/PLM-Team/PLM-1.8B-Instruct-gguf'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-gguf%20model-red'></a>
+<a href='https://huggingface.co/datasets/plm-team/scots'><img src='https://img.shields.io/badge/Dataset-plm%20mix-4169E1'></img></a>
+<a><img src="https://img.shields.io/github/stars/plm-team/PLM"></a>
+
+---
+
+The PLM (Peripheral Language Model) series introduces a novel model architecture to peripheral computing by delivering powerful language capabilities within the constraints of resource-limited devices. Through modeling and system co-design strategy, PLM optimizes model performance and fits edge system requirements, PLM employs **Multi-head Latent Attention** and **squared ReLU** activation to achieve sparsity, significantly reducing memory footprint and computational demands. Coupled with a meticulously crafted training regimen using curated datasets and a Warmup-Stable-Decay-Constant learning rate scheduler, PLM demonstrates superior performance compared to existing small language models, all while maintaining the lowest activated parameters, making it ideally suited for deployment on diverse peripheral platforms like mobile phones and Raspberry Pis.
+
+---
+## News
+
+> The paper **"PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing"** has been released!
+
+## PLM Roadmap
+
+<center>
+    <img src="https://www.cdeng.net/plm/pipe.png" width="100%"/>
+</center>
+
+## PLM Hightlight
+
+PLM demonstrates highly competitive performance along with a series of advantages stemming from its modeling and system co-design. These benefits include impressive inference speed, extreme sparsity, and reduced KV cache due to MLA, enabling it to outperform models with the same number of layers when handling long-context inference tasks at certain sequence lengths.
+
+
+- **Sparse** (Less activated parameters but better performance)
+
+<center>
+    <img src="https://www.cdeng.net/plm/sparse_compare.png" width="50%"/>
+</center>
+
+- **High efficiency** (Generate content with low latency while having a good quality)
+
+<center>
+    <img src="https://www.cdeng.net/plm/latency/latency_all.png" width="100%"/>
+</center>
+
+- **Low kv-cache** on long-context processing leads to a low latency when inference with long sequences.
+
+<center>
+    <img src="https://www.cdeng.net/plm/latency/prefill_eff.png" width="50%"/><img src="https://www.cdeng.net/plm/latency/decode_eff.png" width="50%"/>
+</center>
+
+- **More efficiency** when layer-wise loading.
+
+<center>
+    <img src="https://www.cdeng.net/plm/latency/prefill_ngl.png" width="50%"/><img src="https://www.cdeng.net/plm/latency/decode_ngl.png" width="50%"/>
+</center>
+
+## Performance
+
+PLM-1.8B is a strong and reliable model, particularly in basic knowledge understanding, coding and simple reasoning tasks.
+
+<center>
+
+| **Benchmarks** | PLM-Instruct | MiniCPM | Yulan-Mini | SmolLM2 | Qwen2.5 | Qwen2 | GLM-Edge |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| **ARC-C** | _51.14_ | 43.86 | 50.51 | 50.29 | **53.41** | 43.90 | 24.15 |
+| **ARC-E** | _78.18_ | 55.51 | 69.87 | 77.78 | **79.13** | 62.21 | 36.83 |
+| **MMLU** | 51.18 | 51.13 | 49.10 | 51.91 | **59.79** | _56.50_ | 54.84 |
+| **CMMLU** | 48.18 | 48.97 | 48.35 | 33.46 | _67.82_ | **70.30** | 54.23 |
+| **C-Eval** | 44.93 | 48.24 | 51.47 | 35.10 | _69.05_ | **70.60** | 55.05 |
+| **GSM8K** | 60.73 | 53.83 | _66.65_ | 47.68 | **68.50** | 46.90 | 54.89 |
+| **MathQA** | 33.23 | 30.59 | _34.84_ | 34.30 | **35.14** | 31.66 | 33.94 |
+| **HumanEval** | **64.60** | 50.00 | _61.60_ | 23.35 | 37.20 | 34.80 | 1.21 |
+| **MBPP** | _60.40_ | 47.31 | **66.70** | 45.00 | 60.20 | 46.90 | 3.44 |
+| **BoolQ** | _77.86_ | 73.55 | 70.89 | 72.26 | 72.91 | 72.69 | 60.95 |
+| **Hellaswag** | 68.17 | 53.06 | _71.47_ | **71.48** | 67.73 | 65.41 | 29.39 |
+| **LogiQA** | 30.12 | **31.64** | 29.65 | 29.65 | _31.03_ | 31.02 | 22.73 |
+| **PIQA** | 76.01 | 77.04 | 76.50 | 77.04 | **76.01** | _75.35_ | 74.32 |
+| **Average** | **57.29 (3rd)** | 51.13 | **57.51 (2nd)** | 49.95 | **59.84 (1st)** | 54.48 | 38.92 |
+
+</center>
+
+## How to use PLM
+
+### llama.cpp
+
+The original contribution to the llama.cpp framwork is [Si1w/llama.cpp](https://github.com/Si1w/llama.cpp). Here is the usage:
+
+```bash
+git clone https://github.com/Si1w/llama.cpp.git
+cd llama.cpp
+pip install -r requirements.txt
+```
+
+Then we can build with CPU of GPU (e.g. Orin). The build is based on `cmake`. 
+
+- For CPU
+
+```bash
+cmake -B build
+cmake --build build --config Release
+```
+
+- For GPU
+
+```bash
+cmake -B build -DGGML_CUDA=ON
+cmake --build build --config Release
+```
+
+## Future works
+
+- [ ] Release vLLM, SGLang, and PowerInfer inference scripts for PLM.
+- [ ] Release reasoning model trained on PLM.
+- [ ] Release vision model based on PLM.
+
+## Acknowledgements
+
+We sincerely thank Deepseek for its contributions to the community through the MLA architecture and the PowerInfer project for inspiring our model architecture design. We are grateful to Yixin Song, Yan Song, and Yang Li for their insightful suggestions throughout the project. We also acknowledge the Hong Kong Science and Technology Computing Center for providing essential computing resources. Finally, we extend our deepest appreciation to our team members for their dedication and contributions from September 2024 to the present.
+
+## License
+The code in this repository is released under the MIT License. 
+Limitations: While we strive to address safety concerns and promote the generation of ethical and lawful text, the probabilistic nature of language models may still produce unforeseen outputs. These may include biased, discriminatory, or otherwise harmful content. Users are advised not to disseminate such material. We disclaim any liability for consequences resulting from the distribution of harmful information.
+
+
+## Citation
+If you find **Project PLM** helpful for your research or applications, please cite as follows:
+
+```
+@misc{cheng2025plm,
+      title={PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing}, 
+      author={Cheng Deng, Luoyang Sun, Jiwen Jiang, Yongcheng Zeng, Xinjian Wu, Wenxin Zhao, Qingfa Xiao, Jiachuan Wang, Lei Chen, Lionel M. Ni, Haifeng Zhang, Jun Wang},
+      year={2025},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+}
+```
