@@ -1,4 +1,4 @@
-<div style="text-align:center">
+<div align="center">
 <img src="https://www.cdeng.net/plm/plm_logo.png" alt="k2-logo" width="200"/>
 <h2>🖲️ PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing</h2>
 </div>
@@ -32,7 +32,7 @@ PLM demonstrates highly competitive performance along with a series of advantage
 
 - **Sparse** (Less activated parameters but better performance)
 
-<div style="text-align:center">
+<div align="center">
 <img src="https://www.cdeng.net/plm/sparse_compare.png" width="50%"/>
 </div>
 
