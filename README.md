@@ -2,7 +2,7 @@
 <img src="https://www.cdeng.net/plm/plm_logo.png" alt="k2-logo" width="200"/>
 <h2>🖲️ PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing</h2>
 
-<a href=''>
+<a href='https://sites.google.com/view/project-plm'>👉 Project PLM Website</a>
 
 <a href='https://arxiv.org/abs/'><img src='https://img.shields.io/badge/Paper-ArXiv-C71585'></a>
 <a href='https://huggingface.co/PLM-Team/PLM-1.8B-Base'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-Base-red'></a>
