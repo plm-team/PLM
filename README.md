@@ -2,13 +2,14 @@
 <img src="https://www.cdeng.net/plm/plm_logo.png" alt="k2-logo" width="200"/>
 <h2>🖲️ PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing</h2>
 
+<a href=''>
+
 <a href='https://arxiv.org/abs/'><img src='https://img.shields.io/badge/Paper-ArXiv-C71585'></a>
 <a href='https://huggingface.co/PLM-Team/PLM-1.8B-Base'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-Base-red'></a>
 <a href='https://huggingface.co/PLM-Team/PLM-1.8B-Instruct'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-Instruct-red'></a>
 <a href='https://huggingface.co/PLM-Team/PLM-1.8B-Instruct-gguf'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-gguf-red'></a>
 <a href='https://huggingface.co/datasets/plm-team/scots'><img src='https://img.shields.io/badge/Data-plm%20mix-4169E1'></img></a>
 <a><img src="https://img.shields.io/github/stars/plm-team/PLM"></a>
-
 </div>
 
 ---
@@ -63,19 +64,19 @@ PLM-1.8B is a strong and reliable model, particularly in basic knowledge underst
 
 | **Benchmarks** | PLM-Instruct | MiniCPM | Yulan-Mini | SmolLM2 | Qwen2.5 | Qwen2 | GLM-Edge |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| **ARC-C** | _51.14_ | 43.86 | 50.51 | 50.29 | **53.41** | 43.90 | 24.15 |
-| **ARC-E** | _78.18_ | 55.51 | 69.87 | 77.78 | **79.13** | 62.21 | 36.83 |
-| **MMLU** | 51.18 | 51.13 | 49.10 | 51.91 | **59.79** | _56.50_ | 54.84 |
-| **CMMLU** | 48.18 | 48.97 | 48.35 | 33.46 | _67.82_ | **70.30** | 54.23 |
-| **C-Eval** | 44.93 | 48.24 | 51.47 | 35.10 | _69.05_ | **70.60** | 55.05 |
-| **GSM8K** | 60.73 | 53.83 | _66.65_ | 47.68 | **68.50** | 46.90 | 54.89 |
-| **MathQA** | 33.23 | 30.59 | _34.84_ | 34.30 | **35.14** | 31.66 | 33.94 |
-| **HumanEval** | **64.60** | 50.00 | _61.60_ | 23.35 | 37.20 | 34.80 | 1.21 |
-| **MBPP** | _60.40_ | 47.31 | **66.70** | 45.00 | 60.20 | 46.90 | 3.44 |
-| **BoolQ** | _77.86_ | 73.55 | 70.89 | 72.26 | 72.91 | 72.69 | 60.95 |
-| **Hellaswag** | 68.17 | 53.06 | _71.47_ | **71.48** | 67.73 | 65.41 | 29.39 |
-| **LogiQA** | 30.12 | **31.64** | 29.65 | 29.65 | _31.03_ | 31.02 | 22.73 |
-| **PIQA** | 76.01 | 77.04 | 76.50 | 77.04 | **76.01** | _75.35_ | 74.32 |
+| **ARC-C** | $\underline{\text{51.14}}$ | 43.86 | 50.51 | 50.29 | **53.41** | 43.90 | 24.15 |
+| **ARC-E** | $\underline{\text{78.18}}$ | 55.51 | 69.87 | 77.78 | **79.13** | 62.21 | 36.83 |
+| **MMLU** | 51.18 | 51.13 | 49.10 | 51.91 | **59.79** | $\underline{\text{56.50}}$ | 54.84 |
+| **CMMLU** | 48.18 | 48.97 | 48.35 | 33.46 | $\underline{\text{67.82}}$ | **70.30** | 54.23 |
+| **C-Eval** | 44.93 | 48.24 | 51.47 | 35.10 | $\underline{\text{69.05}}$ | **70.60** | 55.05 |
+| **GSM8K** | 60.73 | 53.83 | $\underline{\text{66.65}}$ | 47.68 | **68.50** | 46.90 | 54.89 |
+| **MathQA** | 33.23 | 30.59 | $\underline{\text{34.84}}$ | 34.30 | **35.14** | 31.66 | 33.94 |
+| **HumanEval** | **64.60** | 50.00 | $\underline{\text{61.60}}$ | 23.35 | 37.20 | 34.80 | 1.21 |
+| **MBPP** | $\underline{\text{60.40}}$ | 47.31 | **66.70** | 45.00 | 60.20 | 46.90 | 3.44 |
+| **BoolQ** | $\underline{\text{77.86}}$ | 73.55 | 70.89 | 72.26 | 72.91 | 72.69 | 60.95 |
+| **Hellaswag** | 68.17 | 53.06 | $\underline{\text{71.47}}$ | **71.48** | 67.73 | 65.41 | 29.39 |
+| **LogiQA** | 30.12 | **31.64** | 29.65 | 29.65 | $\underline{\text{31.03}}$ | 31.02 | 22.73 |
+| **PIQA** | 76.01 | 77.04 | 76.50 | 77.04 | **76.01** | $\underline{\text{75.35}}$ | 74.32 |
 | **Average** | **57.29 (3rd)** | 51.13 | **57.51 (2nd)** | 49.95 | **59.84 (1st)** | 54.48 | 38.92 |
 
 </center>
