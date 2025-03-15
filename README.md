@@ -1,6 +1,6 @@
 <div style="text-align:center">
 <img src="https://www.cdeng.net/plm/plm_logo.png" alt="k2-logo" width="200"/>
-<h2>🖲️PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing</h2>
+<h2>🖲️ PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing</h2>
 </div>
 
 <a href='https://arxiv.org/abs/'><img src='https://img.shields.io/badge/Paper-ArXiv-C71585'></a>
@@ -115,7 +115,7 @@ cmake --build build --config Release
 
 ## Acknowledgements
 
-We sincerely thank Deepseek for its contributions to the community through the MLA architecture and the PowerInfer project for inspiring our model architecture design. We are grateful to Yixin Song, Yan Song, and Yang Li for their insightful suggestions throughout the project. We also acknowledge the Hong Kong Science and Technology Computing Center for providing essential computing resources. Finally, we extend our deepest appreciation to our team members for their dedication and contributions from September 2024 to the present.
+We sincerely thank Deepseek for its contributions to the community through the MLA architecture and the PowerInfer project for inspiring our model architecture design. We are grateful to Yixin Song, Yan Song, and Yang Li for their insightful suggestions throughout the project. We also acknowledge the ADC of the Hong Kong University of Science and Technology (Guangzhou) for providing essential computing resources. Finally, we extend our deepest appreciation to our team members for their dedication and contributions from September 2024 to the present.
 
 ## License
 The code in this repository is released under the MIT License. 
