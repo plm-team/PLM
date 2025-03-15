@@ -44,15 +44,15 @@ PLM demonstrates highly competitive performance along with a series of advantage
 
 - **Low kv-cache** on long-context processing leads to a low latency when inference with long sequences.
 
-<center>
-    <img src="https://www.cdeng.net/plm/latency/prefill_eff.png" width="50%"/><img src="https://www.cdeng.net/plm/latency/decode_eff.png" width="50%"/>
-</center>
+|||
+|:-:|:-:|
+|<img src="https://www.cdeng.net/plm/latency/prefill_eff.png"/>|<img src="https://www.cdeng.net/plm/latency/decode_eff.png"/>|
 
 - **More efficiency** when layer-wise loading.
 
-<center>
-    <img src="https://www.cdeng.net/plm/latency/prefill_ngl.png" width="50%"/><img src="https://www.cdeng.net/plm/latency/decode_ngl.png" width="50%"/>
-</center>
+|||
+|:-:|:-:|
+|<img src="https://www.cdeng.net/plm/latency/prefill_ngl.png"/>|<img src="https://www.cdeng.net/plm/latency/decode_ngl.png"/>|
 
 ## Performance
 
