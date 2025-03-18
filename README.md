@@ -4,7 +4,7 @@
 
 <a href='https://www.project-plm.com/'>👉 Project PLM Website</a>
 
-<a href='https://arxiv.org/abs/'><img src='https://img.shields.io/badge/Paper-ArXiv-C71585'></a>
+<a href='https://arxiv.org/abs/2503.12167'><img src='https://img.shields.io/badge/Paper-ArXiv-C71585'></a>
 <a href='https://huggingface.co/PLM-Team/PLM-1.8B-Base'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-Base-red'></a>
 <a href='https://huggingface.co/PLM-Team/PLM-1.8B-Instruct'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-Instruct-red'></a>
 <a href='https://huggingface.co/PLM-Team/PLM-1.8B-Instruct-gguf'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging Face-gguf-red'></a>
