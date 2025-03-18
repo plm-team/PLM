@@ -161,11 +161,13 @@ Limitations: While we strive to address safety concerns and promote the generati
 If you find **Project PLM** helpful for your research or applications, please cite as follows:
 
 ```
-@misc{cheng2025plm,
+@misc{deng2025plmefficientperipherallanguage,
       title={PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing}, 
-      author={Cheng Deng, Luoyang Sun, Jiwen Jiang, Yongcheng Zeng, Xinjian Wu, Wenxin Zhao, Qingfa Xiao, Jiachuan Wang, Lei Chen, Lionel M. Ni, Haifeng Zhang, Jun Wang},
+      author={Cheng Deng and Luoyang Sun and Jiwen Jiang and Yongcheng Zeng and Xinjian Wu and Wenxin Zhao and Qingfa Xiao and Jiachuan Wang and Lei Chen and Lionel M. Ni and Haifeng Zhang and Jun Wang},
       year={2025},
+      eprint={2503.12167},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.12167}, 
 }
 ```
